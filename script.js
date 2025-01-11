@@ -6,9 +6,12 @@ document.querySelector('.busca').addEventListener('submit', async(event)=>{
         showWarning('Carregando...')
     }
 
-//let url =`http://api.openweathermap.org/geo/1.0/direct?q=${encodeURI(input)},&limit=1&appid=bf866371d57cbfdba200dde031558ce2&units=metric&lang=pt_br`
+// minha - let url =`http://api.openweathermap.org/geo/1.0/direct?q=${encodeURI(input)},&limit=1&appid=bf866371d57cbfdba200dde031558ce2&units=metric&lang=pt_br`
 
-let url =`http://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=bf866371d57cbfdba200dde031558ce2&units=metric&lang=pt_br`
+
+// um do git - let url =`http://api.openweathermap.org/geo/1.0/direct?q=${encodeURI(input)}&limit=1&appid=58ce985714a31aec823c26d9d7dbdde0`;
+
+let url =`http://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=bf866371d57cbfdba200dde031558ce2&units=metric&lang=pt_br` //professor
 
 let results = await fetch(url);
 let json = await results.json();
